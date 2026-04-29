@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+canvas {
+    border: 3px solid white;
+    background: radial-gradient(circle, #3f6e81 0%, #0a0d0e 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.info {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 200px;
+    font-size: 16px;
+}
+
+.player {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid;
+}
+
+.player.player1 {
+    border-left-color: #FF6B6B;
+    background: rgba(255, 107, 107, 0.1);
+}
+
+.player.player2 {
+    border-left-color: #4ECDC4;
+    background: rgba(78, 205, 196, 0.1);
+}
+
+.player-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.lives {
+    margin: 5px 0;
+}
+
+.weapon {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.controls {
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #4ECDC4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.restart-btn:hover {
+    background: #45b8af;
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    display: none;
+    z-index: 100;
+}
+
+.game-over.show {
+    display: block;
+}
+
+.game-over h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.game-over p {
+    font-size: 18px;
+    margin: 10px 0;
+}
